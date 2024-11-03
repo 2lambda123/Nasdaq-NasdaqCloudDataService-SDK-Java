@@ -1,5 +1,6 @@
 package com.nasdaq.ncdsclient.utils;
 
+import java.security.SecureRandom;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;
@@ -24,10 +25,10 @@ public class AvroMocker {
         for( int i=0; i<fields.size(); i++){
             Schema.Type field= fields.get(i).schema().getType();
             if(field.equals(Schema.Type.INT)){
-               record.put(fields.get(i).name(), new Random().nextInt());
+               record.put(fields.get(i).name(), new SecureRandom().nextInt());
             }
             else if(field.equals(Schema.Type.LONG)){
-                record.put(fields.get(i).name(), new Random().nextLong());
+                record.put(fields.get(i).name(), new SecureRandom().nextLong());
             }
             else if (field.equals(Schema.Type.STRING)){
                 String randomStringMessage= RandomStringUtils.randomAlphabetic(1).toUpperCase();
