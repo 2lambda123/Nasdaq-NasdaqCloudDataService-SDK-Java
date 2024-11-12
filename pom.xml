@@ -21,7 +21,7 @@
         <json.java.version>20231013</json.java.version>
         <kafka.version>3.4.0</kafka.version>
         <log4j.version>2.20.0</log4j.version>
-        <netty.version>4.1.94.Final</netty.version>
+        <netty.version>4.1.115.Final</netty.version>
         <slf4jVersion>1.7.36</slf4jVersion>
         <checkstyle.skip>true</checkstyle.skip>
         <junit5.version>5.7.2</junit5.version>
